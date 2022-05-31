@@ -9,11 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "react-transition-group": "^4.4.2",
+    "react-transitions-library": "^1.10.2",
+    "@nightfall-ui/css": "^1.0.13",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "prettier": "^2.6.2",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6"
   }
