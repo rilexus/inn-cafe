@@ -5,7 +5,10 @@ import { TextCenter } from "../../../../ui/TextCenter";
 import Stack from "../../../../ui/Stack/Stack";
 import CoverImg from "../../../../ui/CoverImg/CoverImg";
 import { FullView } from "../../../../ui/FullView";
-import { FadeInTransition } from "react-transitions-library";
+import {
+  FadeInTransition,
+  TranslateTransition,
+} from "react-transitions-library";
 
 const HeroSection = () => {
   return (
@@ -41,28 +44,43 @@ const HeroSection = () => {
                     color: "white",
                   }}
                 >
-                  <FadeInTransition
+                  <TranslateTransition
+                    from={["0px", "50px"]}
+                    to={["0px", "0px"]}
                     in
                     appear
                     timeout={1200}
-                    delay={880}
-                    from={0}
-                    to={1}
+                    delay={800}
                   >
-                    <div>
-                      <h1
-                        style={{
-                          fontSize: "5rem",
-                        }}
-                      >
-                        Welcome to Inn Kaffee
-                      </h1>
-                      <h2>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit.
-                      </h2>
-                    </div>
-                  </FadeInTransition>
+                    <FadeInTransition
+                      in
+                      appear
+                      timeout={1200}
+                      delay={880}
+                      from={0}
+                      to={1}
+                    >
+                      <div>
+                        <h1
+                          style={{
+                            fontSize: "5rem",
+                            margin: 0,
+                          }}
+                        >
+                          Welcome to Inn Kaffee
+                        </h1>
+                        <h2
+                          style={{
+                            fontWeight: "400",
+                            margin: 0,
+                          }}
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit.
+                        </h2>
+                      </div>
+                    </FadeInTransition>
+                  </TranslateTransition>
                 </TextCenter>
               </Col>
             </Row>

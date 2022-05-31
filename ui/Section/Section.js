@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledSection = styled.section`
   padding: 8em 0;
+  min-height: 100vh;
 `;
 
 const Section = (props) => {

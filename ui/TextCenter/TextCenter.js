@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledCenter = styled.div`
   text-align: center;
+  position: relative;
 `;
 
 const TextCenter = forwardRef(function TextCenter(props, ref) {

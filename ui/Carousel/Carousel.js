@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Flex } from "../Flex";
 
 const ScrollContainer = styled.div`
   position: relative;
@@ -8,6 +7,9 @@ const ScrollContainer = styled.div`
   margin-bottom: -50px;
   padding-bottom: 50px;
   user-select: none;
+  // display: flex;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
 `;
 
 const Carousel = ({ children }) => {
@@ -19,26 +21,18 @@ const Carousel = ({ children }) => {
         overflow: "hidden",
       }}
     >
-      <ScrollContainer>
-        <Flex>{children}</Flex>
-      </ScrollContainer>
+      <ScrollContainer>{children}</ScrollContainer>
     </div>
   );
 };
 
-const CarouselItem = ({ children }) => {
-  return (
-    <div
-      style={{
-        //TODO: add media query
-        flexBasis: 1,
-        marginRight: "1rem",
-        position: "relative",
-      }}
-    >
-      {children}
-    </div>
-  );
+const StyledItem = styled.div`
+  margin-right: 1rem;
+  position: relative;
+  scroll-snap-align: start;
+`;
+const CarouselItem = ({ children, ...props }) => {
+  return <StyledItem {...props}>{children}</StyledItem>;
 };
 
 Carousel.Item = CarouselItem;

@@ -11,7 +11,7 @@
   "dependencies": {
     "react-transition-group": "^4.4.2",
     "react-transitions-library": "^1.10.2",
-    "@nightfall-ui/css": "^1.0.13",
+    "@nightfall-ui/css": "^1.0.14",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, forwardRef, useContext, useState } from "react";
 import { Row } from "../Row";
 import Col from "../Col/Col";
 import { useStyle } from "../../hooks/useStyle";
@@ -29,45 +29,29 @@ const TabHead = (props) => {
     </Row>
   );
 };
-const StyledTabButton = styled.li`
-  margin: 0 0.5rem;
-`;
 
-const StyledA = styled.a`
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.2em;
-  border: 2px solid;
-  border-radius: 0;
-  display: block;
-  padding: 0.5rem 1rem;
-`;
-const TabButton = ({ name, children }) => {
+const StyledButton = styled.div``;
+const TabButton = forwardRef(function TabButton(
+  { name, children, as = "a", className, ...props },
+  ref
+) {
   const [activeTab, setActiveTab] = useTabsContext();
   const active = activeTab === name;
 
-  const s = useStyle(
-    {
-      color: active ? "black" : "#ccc",
-      borderColor: active ? "black" : "#ccc",
-    },
-    [active]
-  );
-
   return (
-    <StyledTabButton>
-      <StyledA
-        onClick={() => {
-          setActiveTab(name);
-        }}
-        href={name}
-        style={s}
-      >
-        {children}
-      </StyledA>
-    </StyledTabButton>
+    <StyledButton
+      ref={ref}
+      as={as}
+      className={[className, active ? "active" : ""].join(" ")}
+      onClick={() => {
+        setActiveTab(name);
+      }}
+      href={name}
+    >
+      {children}
+    </StyledButton>
   );
-};
+});
 
 const TabPanel = ({ children, name }) => {
   const [activeTab] = useTabsContext();

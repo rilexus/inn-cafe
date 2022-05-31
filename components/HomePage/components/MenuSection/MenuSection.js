@@ -8,7 +8,7 @@ import { Panel } from "./components";
 import menu from "./menu";
 import styled from "styled-components";
 import { md } from "../../../../ui/css";
-import { textLGCss, textXLCss } from "@nightfall-ui/css";
+import { mb50, mt0, textLGCss, textXLCss } from "@nightfall-ui/css";
 import { SectionTitle } from "../../../../ui/SectionTitle";
 
 const StyledItemImg = styled.img`
@@ -21,9 +21,13 @@ const StyledItemImg = styled.img`
 
 const ItemName = styled.h5`
   ${textXLCss};
+  ${mb50};
+  ${mt0};
 `;
 
 const ItemPrice = styled.h6`
+  display: flex;
+  justify-content: end;
   ${textLGCss};
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -58,6 +62,25 @@ const split = (array) => {
 
   return [firstHalf, secondHalf];
 };
+
+const MenuButton = styled(Tabs.Button)`
+  &.active {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+  }
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  color: black;
+  border: 2px solid #ccc;
+
+  margin: 0 0.5rem;
+
+  border-radius: 0;
+  display: block;
+  padding: 0.5rem 1rem;
+`;
 
 const MenuSection = ({ id }) => {
   const menuByCategory = useMemo(
@@ -99,9 +122,9 @@ const MenuSection = ({ id }) => {
                 <Tabs.Head>
                   {categories.map((c) => {
                     return (
-                      <Tabs.Button name={`#${c}`} key={c}>
+                      <MenuButton name={`#${c}`} key={c}>
                         {c}
-                      </Tabs.Button>
+                      </MenuButton>
                     );
                   })}
                 </Tabs.Head>
