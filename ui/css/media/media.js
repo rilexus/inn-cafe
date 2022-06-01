@@ -30,7 +30,7 @@ const xxl = (...args) => min("1400px")`${css(...args)}`;
 const xl = (...args) => min("1200px")`${css(...args)}`;
 const lg = (...args) => min("992px")`${css(...args)}`;
 const md = (...args) => min("768px")`${css(...args)}`;
-const sm = (...args) => min("567px")`${css(...args)}`;
+const sm = (...args) => min("576px")`${css(...args)}`;
 const xsm = (...args) => max("576px")`${css(...args)}`;
 
 export { min, md, sm, lg, xxl, xl, xsm };

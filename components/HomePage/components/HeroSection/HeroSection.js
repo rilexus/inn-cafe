@@ -63,8 +63,10 @@ const HeroSection = () => {
                       <div>
                         <h1
                           style={{
-                            fontSize: "5rem",
+                            fontSize: "4rem",
                             margin: 0,
+                            marginBottom: "1rem",
+                            lineHeight: 1,
                           }}
                         >
                           Welcome to Inn Kaffee

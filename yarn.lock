@@ -221,11 +221,6 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-darwin-x64@12.1.6":
-  "integrity" "sha512-9FptMnbgHJK3dRDzfTpexs9S2hGpzOQxSQbe8omz6Pcl7rnEp9x4uSEKY51ho85JCjL4d0tDLBcXEJZKKLzxNg=="
-  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-12.1.6.tgz"
-  "version" "12.1.6"
-
 "@nightfall-ui/css@^1.0.14":
   "integrity" "sha512-hzH2P2ZOTtim+Ej8QyO20kqIQBT3J1d2G+2raEn4+1sL2s+BR9vxo1y6GIILm1n452xhE0qNlpCshuieRBDqgA=="
   "resolved" "https://registry.npmjs.org/@nightfall-ui/css/-/css-1.0.14.tgz"
