@@ -56,9 +56,13 @@ const Nav = () => {
   const navStyle = useStyle(
     {
       transition: "background-color 400ms ease",
-      backgroundColor: animate ? "rgba(255,255,255,0.92)" : "rgba(0,0,0,0.85)",
+      backgroundColor: animate
+        ? "rgba(255,255,255,0.92)"
+        : menuOpen
+        ? "rgba(0,0,0,0.85)"
+        : "transparent",
     },
-    [animate]
+    [animate, menuOpen]
   );
 
   const ulStyle = useStyle(

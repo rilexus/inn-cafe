@@ -93,7 +93,14 @@ const MenuSection = ({ id }) => {
   );
 
   return (
-    <Section id={id}>
+    <Section
+      id={id}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Container>
         <Row justify={"center"}>
           <Col

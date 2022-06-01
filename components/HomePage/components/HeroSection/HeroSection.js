@@ -18,11 +18,15 @@ const HeroSection = () => {
       }}
     >
       <Stack>
-        <CoverImg
-          src={
-            "https://preview.colorlib.com/theme/eatwell/images/xbg_3.jpg.pagespeed.ic.DtLaqDmSjy.webp"
-          }
-        >
+        <CoverImg src={"/caffe_4032x3024.jpeg"}>
+          <div
+            style={{
+              position: "absolute",
+              backgroundColor: "black",
+              opacity: 0.8,
+              inset: 0,
+            }}
+          />
           <FullView />
         </CoverImg>
         <FullView>

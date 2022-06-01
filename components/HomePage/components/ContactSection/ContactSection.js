@@ -14,6 +14,9 @@ const ContactSection = ({ id }) => {
       id={id}
       style={{
         backgroundColor: "#f8f9fa",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Container>

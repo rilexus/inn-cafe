@@ -12,7 +12,14 @@ const StorySection = ({ id }) => {
 
   // console.log(a);
   return (
-    <Section id={id}>
+    <Section
+      id={id}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Container>
         <Row>
           <Col md={5}>
