@@ -2,14 +2,11 @@ import { Container, Row, Section } from "../../../../ui";
 import Col from "../../../../ui/Col/Col";
 import { TextCenter } from "../../../../ui/TextCenter";
 import React, { useRef } from "react";
-import { P } from "../../../../ui/P";
 import { Carousel } from "../../../../ui/Carousel";
 import { useAppearedFromBottom } from "../../../../hooks/useAppearedFromBottom";
 import LargeTitle from "../../../../typography/largeTitle/largeTitle";
-import { Subtitle } from "../../../../typography/Subtitle";
 import { Body } from "../../../../typography/Body";
 import { SectionSubtitle } from "../../../../ui/SectionSubtitle";
-import { Flex } from "../../../../ui/Flex";
 import styled from "styled-components";
 import offers from "./offers";
 import { lg, md, sm, xl } from "../../../../ui/css";
@@ -136,16 +133,6 @@ const OffersSection = ({ id }) => {
                 );
               })}
             </Carousel>
-            <Flex
-              style={{
-                fontSize: ".8rem",
-                color: "#adadad",
-                marginTop: ".5rem",
-              }}
-              justify={"center"}
-            >
-              {"« scroll »"}
-            </Flex>
           </Col>
         </Row>
       </Container>

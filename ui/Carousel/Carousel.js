@@ -4,12 +4,27 @@ import styled from "styled-components";
 const ScrollContainer = styled.div`
   position: relative;
   overflow-y: scroll;
-  margin-bottom: -50px;
-  padding-bottom: 50px;
+
+  margin-right: -30px;
+
   user-select: none;
   // display: flex;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
+
+  ::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px #8b8b8b;
+    background-color: transparent;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+  }
 `;
 
 const Carousel = ({ children }) => {
