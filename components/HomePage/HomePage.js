@@ -6,7 +6,7 @@ import { MenuSection } from "./components/MenuSection";
 import { ContactSection } from "./components/ContactSection";
 import { HeroSection } from "./components/HeroSection";
 import { Container } from "../../ui";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useStyle } from "../../hooks/useStyle";
 import { useScrollViewHeight } from "../../hooks/useScrollViewHeight";
 import { sm } from "../../ui/css";
@@ -14,13 +14,26 @@ import { BurgerIcon } from "../../ui/icons/BurgerIcon";
 import { useToggle } from "../../hooks/useToggle";
 import { Media } from "../../ui/Media";
 
+const flexCenterCss = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const NavLink = styled.a`
-  display: block;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  padding: 0 20px;
   color: inherit;
+
+  padding: 20px 20px;
+  transition: color 200ms, background-color 200ms;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+
+  ${flexCenterCss};
 `;
 
 const StyledNav = styled.nav`
@@ -33,15 +46,12 @@ const StyledNav = styled.nav`
 const StyledUl = styled.ul`
   margin: 0;
   padding: 0;
-  padding-top: 30px;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  li {
-    margin-bottom: 2rem;
-  }
+
   ${sm`
     justify-content: end;
     flex-direction: row;

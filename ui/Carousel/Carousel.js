@@ -12,18 +12,22 @@ const ScrollContainer = styled.div`
   white-space: nowrap;
   scroll-snap-type: x mandatory;
 
+  &:hover {
+    ::-webkit-scrollbar-thumb {
+      background-color: #c2c2c2;
+    }
+  }
+
   ::-webkit-scrollbar {
     height: 3px;
   }
 
   ::-webkit-scrollbar-track {
-    // box-shadow: inset 0 0 5px #8b8b8b;
     background-color: transparent;
-    border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #c2c2c2;
+    background-color: transparent;
   }
 `;
 
